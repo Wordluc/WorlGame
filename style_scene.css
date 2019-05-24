@@ -1,0 +1,13 @@
+#contacts{
+    border:solid 1px;
+    width: 50px;
+}
+.control{
+    position: absolute;
+    top:5px;
+    width: 100px
+}
+#id_canvas{
+     position: absolute;
+     top:5px;
+}

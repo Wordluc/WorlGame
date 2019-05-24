@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="property.js"></script>
+    <script>
+    var property=0
+    function begin(){
+        property=new main_property()
+    }
+    </script>
+</head>
+<body onload="begin()">
+<form id="form" align=center name="form">
+           <div style="border: 1px solid black">
+           name:<br>
+           <input type="text" id="name"><br><br>
+            </div>
+            coordinate
+            <div style="border: 1px solid black">
+            <br>
+            x<br >
+           <input type="text" id="x" size=2>
+            <br>y<br>
+            <input type="text" id="y" size=2>
+                <br><br>
+            </div>
+            features
+            <div style="border: 1px solid black">
+            visible<input type="checkbox" id="visible" onclick="property.change_select('control','visible','')"><br>
+            <br>
+            size<br>
+            x<br >
+            <input type="text" id="size_x" size=2>
+            <br>
+            y<br>
+            <input type="text" id="size_y" size=2>
+                <br>
+                <br>
+            type:
+                <br>
+                player<input type="radio"name="type" onclick="property.change_select('read','type','player')" id="type_p"><br>
+                wall<input type="radio"name="type" onclick="property.change_select('read','type','wall')" id="type_w"><br>
+                ghost<input type="radio"name="type" onclick="property.change_select('read','type','ghost')" id="type_g"><br>
+            </div>
+           <br>
+           logic
+           <div style="border: 1px solid black">
+               script
+               <br>
+               <input type="text" id="n_script" ><!-- where i will add script name -->
+               <center>
+               <table id="input_script">
+           
+               </table>    
+               </center>
+               <br>
+
+           </div>
+      <button onclick="property.save_property('save')">apply</button>    
+      <button onclick="property.save_property('delete')">delete</button>    
+        </form>
+        <br><br><br>
+      
+</body>
+
+</html>

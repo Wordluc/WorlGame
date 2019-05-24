@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="explorer.js"></script>
+<script>
+var explorer=0
+function begin(){
+    explorer=new main_explorer()
+}
+function download(file){
+    window.location=file;
+}
+</script>
+</head>
+<body onload="begin()">
+<div class="control">
+    <input type="file" id="file" multiple onchange="explorer.add_reference(event,this.value)"/>
+    <button id="less" onclick="explorer.change_reference('null')" style="display:inline-block">Deselect</button> 
+</div>
+<table id="table_list">
+</table>  
+<a href="guide.odt" download="Guide" style="position: absolute;bottom: 0px">Download</a>
+</body>
+
+</html>
